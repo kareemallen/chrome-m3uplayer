@@ -1,0 +1,13 @@
+{
+    "name": "M3U P{ayer",
+    "description": "Plays m3u playlists",
+    "omnibox": {
+        "keyword": "playm3u"
+    },
+    "browser_action": {
+        "default_icon": "note11.png"
+    },
+    "version": "0.1",
+    "minimum_chrome_version": "9",
+    "manifest_version": 2
+}
