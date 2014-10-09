@@ -7,12 +7,12 @@
     },
     "app": {
         "background": {
-            "scripts": ["main.js", "background.js"]
+            "scripts": ["main.js"]
         }
     },
     "permissions": [
         {
-            "fileSystem": ["directory"]
+            "fileSystem": ["write", "retainEntries", "directory"]
         }
     ],
     "version": "0.1",

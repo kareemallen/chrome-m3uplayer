@@ -4,4 +4,13 @@
  * and open the template in the editor.
  */
 
+console.log ("Background.js loaded");
 
+function myAlert() {
+    console.log("My alert");
+}
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('open-button').addEventListener('click', function() {
+        chrome.fileSystem.chooseEntry({ type: "openFile" }, myAlert);
+    });
+});
