@@ -1,14 +1,20 @@
 {
     "name": "M3U Player",
     "description": "Plays m3u playlists",
+    "minimum_chrome_version": "23",
     "icons": {
         "16": "note11.png"
     },
     "app": {
         "background": {
-            "scripts": ["main.js"]
+            "scripts": ["main.js", "background.js"]
         }
     },
+    "permissions": [
+        {
+            "fileSystem": ["directory"]
+        }
+    ],
     "version": "0.1",
     "manifest_version": 2
 }
