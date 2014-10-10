@@ -20,7 +20,6 @@ function getFile(readOnlyEntry) {
     }
     readOnlyEntry.file(function (file) {
         var reader = new FileReader();
-//        reader.onerror = errorHandler;
         reader.onloadend = function (e) {
             document.getElementById("fileContents").value = e.target.result;
             console.log(e.target.result);
