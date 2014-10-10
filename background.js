@@ -7,6 +7,7 @@
 console.log("Background.js loaded");
 
 document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById("fileContents").hidden = true;
     document.getElementById('open-button').addEventListener('click', function () {
         chrome.fileSystem.chooseEntry({type: "openFile"}, getFile);
     });
@@ -21,11 +22,12 @@ function getFile(readOnlyEntry) {
         var reader = new FileReader();
 //        reader.onerror = errorHandler;
         reader.onloadend = function (e) {
+            document.getElementById("fileContents").value = e.target.result;
             console.log(e.target.result);
         };
+        console.log('Reading file');
         reader.readAsText(file);
-//        console.log(file);
-//        var playlist = M3U.parse(file);
-//        console.log(playlist);
+        document.getElementById("fileContents").hidden = false;
+        document.getElementById("open-button").hidden = true;
     });
 }
